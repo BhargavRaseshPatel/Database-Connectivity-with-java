@@ -10,11 +10,31 @@ export const StoreProvider = ({ children }) => {
     // useEffect(() => {
     // }, [money, selectedNumbers]);
 
+    const selectRandomNumber = () => {
+        console.log("Generate")
+
+        setSelectedNumbers([])
+        let fiveRandomNumber = []
+
+        for (let i = 0; i < 5; i++) {
+            let number = Math.floor(Math.random() * 20) + 1;
+            // console.log(selectedNumbers, number)
+            if(!fiveRandomNumber.includes(number)){
+                // continue;
+                fiveRandomNumber.push(number)
+            } else {
+                i = i -1 
+            }
+        }
+        setSelectedNumbers(fiveRandomNumber)
+    }
+
     const contextValue = {
         money,
         setMoney,
         selectedNumbers,
-        setSelectedNumbers
+        setSelectedNumbers,
+        selectRandomNumber
     }
 
     return (

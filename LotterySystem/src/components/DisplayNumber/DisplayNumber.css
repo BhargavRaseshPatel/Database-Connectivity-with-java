@@ -25,6 +25,7 @@ button {
     font-weight: bold;
     background-color: yellow;
     border: 2px solid black;
+    height: 70px;
 }
 
 .display-number-item button{

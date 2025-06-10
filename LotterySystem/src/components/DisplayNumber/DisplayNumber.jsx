@@ -3,7 +3,7 @@ import './DisplayNumber.css'
 import { StoreContext } from '../../context/StoreContext'
 
 const DisplayNumber = () => {
-    const { selectedNumbers, setSelectedNumbers, setMoney } = useContext(StoreContext)
+    const { selectedNumbers, setSelectedNumbers, setMoney, selectRandomNumber } = useContext(StoreContext)
     let number = []
 
     for (let i = 0; i < 20; i++) {
@@ -25,8 +25,9 @@ const DisplayNumber = () => {
                 </div>
             ))}
 
-            <button>CASH</button>
-            <button onClick={() => {setSelectedNumbers([]); setMoney(0)}}>CLEAR</button>
+            <button className='display-button'>CASH</button>
+            <button className='display-button' onClick={() => {setSelectedNumbers([]); setMoney(0)}}>CLEAR</button>
+            <button className='display-button' onClick={selectRandomNumber}>Random</button>
         </div>
     )
 }
