@@ -11,17 +11,22 @@ const DisplayNumber = () => {
     }
 
     const selectTheNumber = (value) => {
-        if(selectedNumbers.length >= 5) {
-            alert("You can only select 5 numbers");
-            return;
+        if(selectedNumbers.includes(value)){
+            console.log("Yes")
+            setSelectedNumbers((pro) => pro.filter(num => num !== value))
+        } else {
+            if(selectedNumbers.length >= 5) {
+                alert("You can only select 5 numbers");
+                return;
+            }
+            setSelectedNumbers((prev) => [value,...prev]); 
         }
-        setSelectedNumbers([...selectedNumbers,value]); console.log(selectedNumbers)
     }
     return (
         <div className="display-number">
             {number.map((value, index) => (
                 <div key={index} className={`display-number-item ${selectedNumbers.includes(value) ? 'selected' : ''}`}>
-                    <button disabled={selectedNumbers.includes(value)} onClick={() => selectTheNumber(value)}>{value}</button>
+                    <button onClick={() => selectTheNumber(value)}>{value}</button>
                 </div>
             ))}
 
