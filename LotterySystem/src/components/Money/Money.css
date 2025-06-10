@@ -1,0 +1,26 @@
+div .money-container {
+    background-color: yellow;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 16px;
+}
+
+.money-item {
+    border: 2px solid black;
+    border-radius : 50%;
+    height: fit-content;
+    margin: 4px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    font-weight:bolder;
+    font-size: 28px;
+    color: white;
+    background-color: black;
+}
+
+.money-item button {
+    color: white;
+    background-color: black;
+}

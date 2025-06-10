@@ -1,0 +1,18 @@
+.header {
+    background-color: #2596be;
+    width: 100%;
+    margin: 0px;
+    height: 120px;
+}
+
+p {
+    font-family: 'Arial Rounded MT Bold', Courier, monospace;
+    height: 100%;
+    margin: 0px;
+    color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+}

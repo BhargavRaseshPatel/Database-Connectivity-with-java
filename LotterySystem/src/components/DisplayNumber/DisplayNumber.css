@@ -1,0 +1,39 @@
+.display-number {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
+    background-color: #2596be;
+    color: white;
+    gap: 4px;
+    padding: 4px;
+}
+
+.display-number-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 4px;
+    background-color: black;
+    border-radius: 4px;
+    color: yellow;
+    height: 50px;
+}
+
+button {
+    grid-column: span 2;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: yellow;
+    border: 2px solid black;
+}
+
+.display-number-item button{
+    background-color: black;
+    color: yellow;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.selected {
+    border: 3px solid red;
+}
