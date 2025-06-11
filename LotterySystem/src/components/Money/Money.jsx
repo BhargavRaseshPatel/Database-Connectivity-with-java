@@ -9,10 +9,8 @@ const Money = () => {
     return (
         <div className='money-container'>
             {moneyDisplay.map((value, index) => (
-                <div
-                    key={index} className='money-item'>
-                    <button onClick={() => { if (selectedNumbers.length == 5) setMoney(money + value) }}>${value}</button>
-                </div>
+              
+                    <button className='money-item' onClick={() => { if (selectedNumbers.length == 5) setMoney(money + value) }}>${value}</button>
             ))}
         </div>
     )

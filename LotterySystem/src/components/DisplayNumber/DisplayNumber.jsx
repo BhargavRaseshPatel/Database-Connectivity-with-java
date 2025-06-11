@@ -25,9 +25,8 @@ const DisplayNumber = () => {
     return (
         <div className="display-number">
             {number.map((value, index) => (
-                <div key={index} className={`display-number-item ${selectedNumbers.includes(value) ? 'selected' : ''}`}>
-                    <button onClick={() => selectTheNumber(value)}>{value}</button>
-                </div>
+                    <button className={`display-number-item ${selectedNumbers.includes(value) ? 'selected' : ''}`}
+                     onClick={() => selectTheNumber(value)}>{value}</button>
             ))}
 
             <button className='display-button'>CASH</button>

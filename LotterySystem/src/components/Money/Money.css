@@ -1,26 +1,21 @@
-div .money-container {
-    background-color: yellow;
-    height: fit-content;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 16px;
+.money-container {
+  background-color: yellow;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;    /* centre items in each column */
+  align-items: center;      /* centre items in each row */
+  padding: 16px;
+  height: fit-content;
+  gap: 8px;                 /* space between buttons */
 }
 
 .money-item {
-    border: 2px solid black;
-    border-radius : 50%;
-    height: fit-content;
-    margin: 4px;
-    padding: 16px;
-    display: flex;
-    justify-content: center;
-    font-weight:bolder;
-    font-size: 28px;
-    color: white;
-    background-color: black;
-}
-
-.money-item button {
-    color: white;
-    background-color: black;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 24px;
+  font-weight: bolder;
+  font-size: 28px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
 }

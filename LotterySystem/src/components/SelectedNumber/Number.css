@@ -1,5 +1,12 @@
-div {
+.container {
     background-color: yellow;
-    /* height: 80vh; */
+    height: 80vh;
+    /* border: 2px solid black; */
+    position: relative;
+}
 
+.total-money {
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
 }

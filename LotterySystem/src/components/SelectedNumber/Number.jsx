@@ -6,7 +6,7 @@ const Number = () => {
   
   const {money, selectedNumbers} = useContext(StoreContext)
   return (
-    <div>
+    <div className='container'>
       <h2>Number Selected : </h2>
 
       {selectedNumbers.map((value, index) => (
@@ -14,7 +14,7 @@ const Number = () => {
           <h3>Mark : {value}</h3>
         </div>
       ))}
-      <h2>Total : $ {money}</h2>
+      <h2 className='total-money'>Total : $ {money}</h2>
     </div>
   )
 }
